@@ -45,7 +45,7 @@ def generate_pdf(heroi: str, historia: str, tipo: str):
     pdf.add_final_pages()
 
     filename = f"{tipo}_{heroi.replace(' ', '_')}.pdf"
-    filepath = f"/app/{filename}"
+    filepath = f"/tmp/{filename}"  # <<< corrigido aqui
     pdf.output(filepath)
     return filepath
 
